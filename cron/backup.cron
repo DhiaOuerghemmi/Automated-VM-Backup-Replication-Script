@@ -1,0 +1,2 @@
+# Run daily at 2 AM as dedicated user
+0 2 * * *  vmbackupuser flock -n /var/lock/vm-backup.lock /usr/local/bin/backup.sh >> /var/log/vm-backup/cron.log 2>&1
